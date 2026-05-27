@@ -1,0 +1,38 @@
+{
+  "name": "snappfood-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for exploring Snappfood addresses, restaurants, menus, and product reviews.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "snappfood-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "snappfood",
+    "food-delivery"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
